@@ -1,0 +1,120 @@
+@font-face {
+	src:url(fonts/Merriweather-Light.ttf);
+	font-family: merri;
+}
+@font-face {
+	src:url(fonts/golostext_regular.ttf);
+	font-family: golos;
+}
+@font-face {
+	src:url(fonts/golostext_medium.ttf);
+	font-family: golosmedium;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: merri;
+}
+header{
+	z-index: 1;
+	position: static;
+}
+.wrap{
+	width:89.33%;
+	margin: 0 auto;
+	
+}
+
+.banner{
+	background-image: url(images/bg.png);
+	height: 775px;
+	width: 100vw;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.banner-content{
+	margin-top: 36px;
+	z-index: 1;
+	position: relative;
+}
+.banner-title{
+	font-size: 2.25rem;
+	line-height: 110%;
+	text-transform: uppercase;
+	color: #313131;
+}
+.banner-desc{
+	margin-top:24px;
+	font-family: golos;
+	font-size: 18px;
+	line-height: 130%;
+}
+.banner-button{
+	width: 100%;
+	border-radius: 66px;
+	border:none;
+	padding: 13px 0px;
+	font-family: golosmedium;
+	line-height: 130%;
+	font-size: 16px;
+}
+.banner-button-dark{
+	margin-top: 31px;
+	background: #1F1F1F;
+	color: white;
+}
+.banner-button-light{
+	color: black;
+	background: rgba(255, 255, 255, 0.9);
+	margin-top: 14px;
+}
+.banner-button-block{
+	display: flex;
+	flex-wrap: wrap;
+}
+.banner-images-block{
+	width: 100%;
+	position: relative;
+	background: red;
+	height: 500px;
+}	
+.banner-image-city{
+	position: absolute;
+	right: -30%;
+	top: 50px;
+	width: calc(100% * 2.4);
+}
+.banner-image-sun{
+	position: absolute;
+	width: 90%;
+	top:-60px;
+	left: 10px;
+	z-index: 0;
+	
+}
+.banner-image-chess1, .banner-image-chess2, .banner-image-chess3,.banner-image-chess4{
+	position: absolute;
+}
+.banner-image-chess1 {
+
+}
+.banner-image-chess2 {
+	
+}
+.banner-image-chess3 {
+	
+}
+.banner-image-chess4 {
+	
+}
+
+@media screen and (min-width: 568px) {
+	.banner-title {
+		font-size: 60px;
+	}
+	.banner-button{
+		width: 50%;
+		margin-top: 25px !important;
+	}
+}
