@@ -1,3 +1,14 @@
+:root {
+	--MainFont: merri;
+	--golos:golos;
+	--golosmedium:golosmedium;
+	--normal-font-size:  1.25rem;
+	--small-font-size:1.125rem;
+	--big-font-size:1.75rem;
+	--title-font-size:2.25rem;
+	--text-color: #313131;
+	--header-height:50px;
+}
 @font-face {
 	src:url(fonts/Merriweather-Light.ttf);
 	font-family: merri;
@@ -14,107 +25,663 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: merri;
-}
-header{
-	z-index: 1;
-	position: static;
-}
-.wrap{
-	width:89.33%;
-	margin: 0 auto;
 	
 }
+ul {
+  list-style: none;
+}
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body{
+	font-family: var(--MainFont);
+	color: var(--text-color);
+}
+.main{
+	overflow-x: hidden; /*скрывает всякую хуйню*/
+	
+}
+.container{
+	max-width: 1366px;
+  	margin-inline: 1.25rem; 	
+}
+.header{
+	padding-top: 30px;
+	margin-bottom: 20px;
+}
 .banner{
-	background-image: url(images/bg.png);
-	height: 775px;
-	width: 100vw;
-	overflow: hidden;
-	padding-top: 20px;
+	position: relative; /*будет папочкой для сити пнг*/	
 }
-.banner-content{
-	margin-top: 36px;
-	z-index: 1;
+
+.banner__container{
+	display: grid;
+	padding-top: 45px;
+	row-gap: 2rem;
+}
+.banner__content{
 	position: relative;
+	z-index: 2;
 }
-.banner-title{
-	font-size: 2.25rem;
-	line-height: 110%;
+.title{
+	font-size: var(--title-font-size);
 	text-transform: uppercase;
-	color: #313131;
+	line-height: 110%;
+	margin-bottom: 22px;
 }
-.banner-desc{
-	margin-top:24px;
-	font-family: golos;
-	font-size: 18px;
+.title__span-1 {
+	text-align: center;
+	display: block;
+}
+.title__span-2 {
+	text-align: right;
+	display: block;
+}
+.title__span-3{
+	display: flex;
+	text-align: left;
+	align-items: center;
+	
+}
+.text__detail{
+	font-size: var(--small-font-size);
+	text-transform: none;
+	font-family: var(--golos);
+	color: #3057A2;
+	font-weight: 100;
+	line-height: normal;
+	
+}
+.banner-description{
 	line-height: 130%;
+	font-size: 18px;
+	font-family: golos;
+	margin-bottom: 28px;
+	text-align: center;
 }
-.banner-button{
-	width: 100%;
+.banner__images{
+	height: 250px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.banner__images img{
+	position: absolute;
+}
+.banner__buttons{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: .75rem;
+}
+.banner__button-support, .banner__button-detail{
+	display: inline-block;
 	border-radius: 66px;
-	border:none;
-	padding: 13px 0px;
 	font-family: golosmedium;
 	line-height: 130%;
 	font-size: 16px;
-}
-.banner-button-dark{
-	margin-top: 31px;
-	background: #1F1F1F;
-	color: white;
-}
-.banner-button-light{
-	color: black;
-	background: rgba(255, 255, 255, 0.9);
-	margin-top: 14px;
-}
-.banner-button-block{
-	display: flex;
-	flex-wrap: wrap;
-}
-.banner-images-block{
+	padding: 15px 40px;
 	width: 100%;
-	position: relative;
-	background: red;
-	height: 500px;
-}	
-.banner-image-city{
-	position: absolute;
-	right: -30%;
-	top: 50px;
-	width: calc(100% * 2.4);
+	text-align: center;
 }
-.banner-image-sun{
+.banner__button-support{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+.banner__button-detail{
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+}
+.banner__city{
+	max-width: initial;
 	position: absolute;
-	width: 90%;
-	top:-60px;
-	left: 10px;
+    bottom: 0px;
+    width: 900px;
+	right: -110px;
 	z-index: 0;
+}
+.banner__sun{
+	z-index: 0;
+	bottom: 25px;
+	width: 335px;
+}
+.banner__chess-1{
+	bottom: 10rem;
+	width: 65px;
+	z-index: 0;
+	right: 60px;
+}
+.banner__chess-2{
+	bottom: 7rem;
+	width: 60px;
+	z-index: 0;
+	right: 260px;
+}
+.banner__chess-3{
+	bottom: 2rem;
+	width: 80px;
+	z-index: 2;
+	right: 200px;
+}
+.banner__chess-4{
+	bottom: 0;
+	width: 60px;
+	z-index: 2;
+	right: -100px;
+}
+.ticker{
+	overflow: hidden;
+	position: relative;
+	background-color: #F54932;
+
+}
+.ticker__wrapper{
+	display: flex;
+	padding-block:12px ;	
+	animation: ticker 7s linear infinite;
+	width: max-content;
+}
+.ticker__item{
+	white-space: nowrap;
+	padding: 0;
+	font-size: 22px;
+	color: white;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+.ticker__item-circle{
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	background-color: white;
+	display: inline-block;
+	margin-inline: 15px;
+}
+.lecture{
+	
+	display: grid;	
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+.medium__text {
+	line-height: 135%;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+.medium__text-highlighted{
+	font-weight: 900; 
+	color: #F54932;
+}
+.lecture__text-1{
+	margin-bottom: 20px;
+}
+
+.lecture__img-small{
+	margin-block: 30px;
+}
+.lecture__img-big{
+	display: none;
+}
+.game{
+	display: grid;
+}
+.game__img{
+	max-width: 100%;
+}
+table{
+	border-collapse: collapse;
+	font-size: var(--normal-font-size);
+	margin-top: 50px;
+	font-family: golos;
+	width: 100%;
+}
+td{
+	display: block;
+	padding-block: 15px;
+}
+td:nth-child(2){
+	font-weight: 600;
+}
+tr{
+	border-bottom: 2px solid #D0D0D0;
+}
+tr:last-child{
+	border-bottom: none;
+}
+.disabled {
+	fill: #D6D6D6;
+}
+.active{
+	fill: #313131;
+	background-color: #313131 !important;
+}
+.stages{
+	margin-top: 130px;
+}
+.stages__container{
+	width: max-content;
+	display: grid;
+	transition: 0.5s linear;
+	position: relative;
+	margin-top: 150px;
+	margin-inline: -1.25rem;
+}
+[class^='stages__item'] {
+	display: flex;
+	background-image: url(images/bg.png);
+	padding: 30px 20px;
+	width: calc(100vw - 40px);
+	height: auto;
+	font-family: var(--golos);
+	font-size: var(--normal-font-size);
+	margin-inline: 20px;
 	
 }
-.banner-image-chess1, .banner-image-chess2, .banner-image-chess3,.banner-image-chess4{
+.stages__item-1{
+	padding-top: 100px;
+}
+.stages__item-3 {
+	grid-column: 2/3;
+	grid-row: 1/3;	
+}
+.stages__item-4 {
+	grid-column: 3/4;
+	grid-row: 1/2;	
+}
+.stages__item-6 {
+	grid-column: 4/5;
+	grid-row: 1/3;	
+}
+.stages__item-7 {
+	grid-column: 5/6;
+	grid-row: 1/3;	
+}
+.stages__number {
+	background: white;
+	border-radius: 50%;
+	width: fit-content;
+	height: fit-content;
+	padding: 5px 10px;
+	margin-right: 10px;
+	font-weight: 900;
+}
+.stages__switcher {
+	display: flex;
+	width: 200px;
+	margin-inline: auto;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.stages__img{
 	position: absolute;
-}
-.banner-image-chess1 {
+	top:-150px;
+	left: 0px;
 
 }
-.banner-image-chess2 {
-	
+.stages__switcher__dots {
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+	width: 50%;
 }
-.banner-image-chess3 {
-	
+.stages__switcher_dot{
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: gray;
 }
-.banner-image-chess4 {
-	
+.participants{
+	margin-top: 130px;
+	margin-bottom: 100px;
 }
-
-@media screen and (min-width: 568px) {
-	.banner-title {
-		font-size: 60px;
+.participants__container{
+	display: flex;
+	margin-top: 45px;
+	width: max-content;
+	flex-wrap: wrap;
+	margin-inline: -1.25rem;
+	transition: .5s;
+}
+[class^='participant__item'] { 
+	
+	text-align: center;
+	width: 100vw;
+}
+[class^='participant__item'] img{
+	max-width:100%;
+	display: inline;
+	margin-bottom: 35px;
+}
+.participant__name{
+	font-family: var(--golos);
+	font-weight: 900;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+.participant__grade{
+	font-family: var(--golosmedium);
+	font-size: 20px;
+	color: gray;
+	margin-bottom: 20px;
+}
+.participant__details-button{
+	padding: 12px 12px;
+	border-radius: 62px;
+	background: none;
+	border:1px solid #3057A2;
+	font-family: var(--golos);
+	color: #3057A2;
+}
+.participants__switcher{
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	font-family: var(--golos);
+	justify-content: center;
+	margin-top: 40px;
+}
+footer{
+	background-color: #E9DED4;
+	padding-bottom: 70px;
+	padding-top: 45px;
+	color: gray;
+	font-family: var(--golos);
+	line-height: 120%;
+	font-size: 16px;
+	border-spacing: 12px;
+}
+@keyframes ticker {
+	0%{
+		transform: translateX(100%);
 	}
-	.banner-button{
-		width: 50%;
-		margin-top: 25px !important;
+	100%{
+		transform: translateX(-100%);
+	}
+}
+@media screen and (min-width:480px) {
+	.banner__city{
+		bottom: 0px;
+		
+	}
+	.banner__content{
+		width: 400px;
+		margin-inline: auto;
+	}
+	.lecture__content{
+		max-width: 400px;
+		margin-inline: auto;
+	}
+	
+}
+
+
+/*здесь город встает уже сбоку*/
+@media screen and (min-width: 767px) {
+	.banner{
+		height: auto;
+	}
+	.banner__container{
+		grid-template-columns: 400px 50%;
+		justify-content: center;	
+		padding-top: 0px;
+	}
+	.banner__buttons{
+		display: flex;
+		flex-direction: row;
+	}
+	.banner__city{
+		width: initial;
+		z-index: 1;
+	}
+	.banner__images{
+		height: 900px;
+	}
+	.banner__sun{
+		width: 100%;
+		bottom: 10rem;
+	}
+	.banner__content{
+		padding-top: 8rem;
+	}
+	.banner__chess-1, .banner__chess-2, .banner__chess-3, .banner__chess-4 {
+		width: initial;
+	}
+	.banner__chess-1 {
+		bottom: 20rem;
+	}
+	.banner__chess-2 {
+		bottom: 17rem;
+	}
+	.lecture__content {
+		max-width: 1300px;
+		padding-inline: 20px;
+		
+	}
+	
+	.lecture__img-big{
+		grid-column: 2 / 3;
+		display: grid;
+		max-width: initial;
+	}
+	.lecture__img-small{
+		display: none;
+	}
+
+	
+	td:nth-child(1){
+		
+		color: #D0D0D0;
+		line-height: 120%;
+	}
+	td:nth-child(2){
+		padding-left: 10px;
+	}
+	.game{
+		align-items: center;
+	}
+	.game__img {
+		display: grid;
+		grid-column: 1 / 2;
+		max-width: 100%;
+	}
+	.game__content{
+		max-width: 400px;
+		grid-column: 2 / 3;
+		padding-top: 40px;
+	}
+	.stages__container{
+		display: grid;
+		align-items: center;
+		gap:10px;
+		width: 100vw;
+		margin-top: 70px;
+		margin-inline: 0px;
+	}
+	[class^='stages__item'] {
+		display: flex;
+		background-image: url(images/bg.png);
+		padding: 20px;
+		width: 100%;
+		height: 100%;
+		font-family: var(--golos);
+		font-size: var(--normal-font-size);
+		margin-inline: 0px;
+	}
+	.stages__item-4 {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;	
+	}
+	.stages__item-6 {
+		grid-column: initial;
+		grid-row: initial;	
+	}
+	.stages__item-3{
+		grid-row: 1 / 3;
+		grid-column: 3 / 4;	
+	}
+	.stages__item-7{
+		grid-column: 2 / 4;	
+		grid-row: 3 / 4;
+		position: relative;
+		display: block;
+	}
+	.stages__img{
+		margin-inline: auto;
+		position: static;
+	}
+	.stages__switcher{
+		display: none;
+	}
+	.participants__container{
+		display: flex;
+		margin-top: 70px;
+		width: 200%;
+		flex-wrap: nowrap;
+	}
+	.participants{
+		overflow-x: hidden;
+		position: relative;
+	}
+	[class^='participant__item'] { 
+		
+		text-align: center;
+		width: calc(100% / 3);
+		margin-inline: 30px;
+	}
+	[class^='participant__item'] img{
+		max-width:100%;
+		display: inline;
+	}
+	.participants__switcher{
+		position: absolute;
+		right: 0px;
+		top:20px;
+		margin:0px;
+	}
+}
+
+@media screen and (min-width:1300px){
+	.logo__image{
+		margin-left: 5rem;
+	}
+	.container{
+		margin-inline: auto;
+	}
+	.banner__container{
+		grid-template-columns: repeat(2, 50%);
+		justify-content: center;	
+		padding-top: 45px;
+	}
+	.banner__content{
+		padding-top: 0px;
+		width: initial;
+	}
+
+	.banner__content-wrapper{
+		width: 83%;
+		margin-inline: auto;
+		
+	}
+	.title{
+		font-size: 3.75rem;
+	}
+	.banner__images{
+		height: 600px;
+	}
+	.banner__city{
+		width: initial;
+		right: -150px;
+	}
+	
+	.banner__sun{
+		max-width: initial;
+		top:-10rem;
+	}
+	
+	.banner__chess-1{
+		top:70px;
+		right: 150px;
+	}
+	.banner__chess-2{
+		top:175px;
+		left: 60px;
+	}
+	.banner__chess-3{
+		bottom: 0rem;
+		left: 155px;
+	}
+	.banner__chess-4{
+		right: 35px;
+		bottom: 1rem;
+	}
+	.banner__buttons{
+		column-gap: 1rem;
+	}
+	.banner__button-support, .banner__button-detail {
+		padding: 20px 60px;
+	}
+	.banner__button-detail{
+		background: none;
+		border: 2px solid black;
+		color: black;
+	}
+	.lecture{
+		margin-top: 80px;
+	}
+	.lecture__content{
+		width:900px; 
+		padding-inline: 70px; 
+		padding-top: 10px; 
+		
+	}
+	.medium__text{
+		font-size: 36px;
+	}
+	.game__img{
+		max-width: initial;
+	}
+	.game__content{
+		max-width: 700px;
+	}
+	.game{
+		align-items: stretch;
+	}
+	td{
+		display: table-cell;
+	}
+	td:nth-child(1){
+		border-right: 2px solid #D0D0D0;
+	}
+	.stages{
+		margin-top: 200px;
+	}
+	.stages__container{
+		width: 100%;
+	}
+	.stages__img{
+		position: absolute;
+		top:-100px;
+		right: -40px;
+		max-width: initial;
+		left: auto;
+	}
+	.stages__item-7{
+		position: relative;
+	}
+	.stages-7-extended{
+		max-width: 500px;
+	}
+	.participants{
+		margin-top: 200px;
+		margin-bottom: 130px;
 	}
 }
