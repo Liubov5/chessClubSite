@@ -181,7 +181,6 @@ body{
 	overflow: hidden;
 	position: relative;
 	background-color: #F54932;
-
 }
 .ticker__wrapper{
 	display: flex;
@@ -206,6 +205,15 @@ body{
 	display: inline-block;
 	margin-inline: 15px;
 }
+@keyframes ticker {
+	0%{
+		transform: translateX(100%);
+	}
+	100%{
+		transform: translateX(-100%);
+	}
+}
+
 .lecture{
 	
 	display: grid;	
@@ -401,14 +409,7 @@ footer{
 	font-size: 16px;
 	border-spacing: 12px;
 }
-@keyframes ticker {
-	0%{
-		transform: translateX(100%);
-	}
-	100%{
-		transform: translateX(-100%);
-	}
-}
+
 @media screen and (min-width:480px) {
 	.banner__city{
 		bottom: 0px;
@@ -425,7 +426,7 @@ footer{
 	
 }
 
-
+/*планшеты*/
 /*здесь город встает уже сбоку*/
 @media screen and (min-width: 767px) {
 	.banner{
@@ -466,7 +467,6 @@ footer{
 	.lecture__content {
 		max-width: 1300px;
 		padding-inline: 20px;
-		
 	}
 	
 	.lecture__img-big{
@@ -477,7 +477,6 @@ footer{
 	.lecture__img-small{
 		display: none;
 	}
-
 	
 	td:nth-child(1){
 		
@@ -571,6 +570,7 @@ footer{
 	}
 }
 
+/*ноутбуки, компьютеры*/
 @media screen and (min-width:1300px){
 	.logo__image{
 		margin-left: 5rem;
