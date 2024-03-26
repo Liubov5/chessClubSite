@@ -34,7 +34,7 @@ ul {
 a {
   text-decoration: none;
 }
-
+html{scroll-behavior:smooth}
 img {
   display: block;
   max-width: 100%;
@@ -43,6 +43,7 @@ img {
 body{
 	font-family: var(--MainFont);
 	color: var(--text-color);
+
 }
 .main{
 	overflow-x: hidden; /*скрывает всякую хуйню*/
@@ -185,7 +186,7 @@ body{
 .ticker__wrapper{
 	display: flex;
 	padding-block:12px ;	
-	animation: ticker 7s linear infinite;
+	animation: ticker 15s linear infinite;
 	width: max-content;
 }
 .ticker__item{
@@ -233,6 +234,7 @@ body{
 }
 .game{
 	display: grid;
+	margin-top: 70px;
 }
 .game__img{
 	max-width: 100%;
