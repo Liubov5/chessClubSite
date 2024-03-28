@@ -14,4 +14,5 @@
 <img src="mobile_version_animation.gif">
   
 <p>Click on image to watch full example 👇 </p>
+
 [![Watch the video](https://img.youtube.com/vi/i3BPghgLeTY/maxresdefault.jpg)](https://youtu.be/i3BPghgLeTY)
