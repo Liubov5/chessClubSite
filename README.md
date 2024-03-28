@@ -3,7 +3,10 @@
 <h3>I used CSS grid, CSS flex to make the site responsive and mobile-first 👇 </h3>
 <img src="css-grid-min.gif">
 
-<h3>Also, I have created GSAP animations, simple animations, sliders for the mobile  and computer versions</h3>
+<h3>Two sliders for the mobile  and computer versions</h3>
+<img src="slider.png">
+
+<h3>Also, I have created GSAP animations, simple animations</h3>
 
 
 
