@@ -5,6 +5,7 @@
 
 <h3>Two sliders for the mobile  and computer versions</h3>
 <img src="slider.png">
+<img src="slider2.png">
 
 <h3>Also, I have created GSAP animations, simple animations</h3>
 
