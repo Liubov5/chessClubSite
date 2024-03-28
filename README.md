@@ -8,6 +8,17 @@
 <img src="slider2.png">
 
 <h3>Also, I have created GSAP animations, simple animations</h3>
+<div style="display:flex">
+  <div>
+    <img src="desktop_version_animation.gif">
+    <h4>Desktop version</h4>
+  </div>
+  <div>
+    <img src="mobile_version_animation.gif">
+    <h4>Mobile version</h4>
+  </div>
+</div>
+
 
 
 
