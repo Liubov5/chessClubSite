@@ -4,6 +4,7 @@
 <img src="css-grid-min.gif">
 
 <h3>Two sliders for the mobile  and computer versions</h3>
+<p>The slider with participants switch each 4 seconds</p>
 <img src="slider.png">
 <img src="slider2.png">
 
