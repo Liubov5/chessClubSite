@@ -92,8 +92,8 @@ stages_right_arrow.addEventListener('click', ()=> {
 let participants_to_right_switcher = () => {
     if(Math.abs(participants_value) < Math.abs((participants_container.clientWidth ) - Math.abs(participants_step_value) )) {
       
-        participants_left_arrow.classList.add("active");
-        participants_right_arrow.classList.remove("disabled");
+         participants_left_arrow.classList.remove("disabled");
+        participants_right_arrow.classList.add("disabled");
 
         participants_number_indicator += participants_number_step_value;
         participants_number_elem.innerHTML = participants_number_indicator;
@@ -102,8 +102,6 @@ let participants_to_right_switcher = () => {
         participants_container.style.transform = `TranslateX(${participants_value}px)`;
         
         if (Math.abs(participants_value) == Math.abs(participants_container.clientWidth) - Math.abs(participants_step_value) ) {
-            participants_right_arrow.classList.add("disabled");
-            participants_right_arrow.classList.remove("active");
             participants_side_by_time='left'
         }  
     }
@@ -111,8 +109,8 @@ let participants_to_right_switcher = () => {
 
 let participants_to_left_switcher = () => {
     if(participants_value < 0 ) {
-        participants_right_arrow.classList.add("active");
-        participants_left_arrow.classList.remove("disabled");
+        participants_right_arrow.classList.remove("disabled");
+        participants_left_arrow.classList.add("disabled");
 
         participants_number_indicator -= participants_number_step_value;
         participants_number_elem.innerHTML = participants_number_indicator;
@@ -120,8 +118,6 @@ let participants_to_left_switcher = () => {
         participants_value += participants_step_value;
         participants_container.style.transform = `TranslateX(${participants_value}px)`;
         if (participants_value == 0) {
-            participants_left_arrow.classList.remove("active");
-            participants_left_arrow.classList.add("disabled");
             participants_side_by_time = 'right'
         } 
     }
@@ -139,37 +135,3 @@ let participants_switcher_by_time = () => {
         participants_to_left_switcher();
     }
 }
-
-// let participants_switcher = () => {
-//     if(participants_value < 0 ) {
-//         participants_right_arrow.classList.add("active");
-//         participants_left_arrow.classList.remove("disabled");
-
-//         participants_count -=participants_step_count;
-//         participants_number.innerHTML = participants_count;
-
-//         participants_value += participants_step_value;
-//         participants_container.style.transform = `TranslateX(${participants_value}px)`;
-//         if (participants_value == 0) {
-//             participants_left_arrow.classList.remove("active");
-//             participants_left_arrow.classList.add("disabled");
-//         } 
-//     }
-
-//     else if(Math.abs(participants_value) < Math.abs((participants_container.clientWidth ) - Math.abs(participants_step_value) )) {
-      
-//         participants_left_arrow.classList.add("active");
-//         participants_right_arrow.classList.remove("disabled");
-
-//         participants_count +=participants_step_count;
-//         participants_number.innerHTML = participants_count;
-
-//         participants_value -= participants_step_value;
-//         participants_container.style.transform = `TranslateX(${participants_value}px)`;
-        
-//         if (Math.abs(participants_value) == Math.abs(participants_container.clientWidth) - Math.abs(participants_step_value) ) {  
-//             participants_right_arrow.classList.add("disabled");
-//             participants_right_arrow.classList.remove("active");
-//         }  
-//     } 
-// }

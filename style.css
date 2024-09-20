@@ -132,13 +132,23 @@ body{
 	text-align: center;
 }
 .banner__button-support{
-	background-color: black;
+	background-color: #1F1F1F;
 	color: white;
-	border: 2px solid black;
+	
+}
+.banner__button-support:hover{
+	background-color: #FBCE51;
+	color: black;
+	
 }
 .banner__button-detail{
 	background-color: rgba(255, 255, 255, 0.8);
 	color: black;
+}
+.banner__button-detail:hover{
+	background-color: #1F1F1F;
+	color: white;
+
 }
 .banner__city{
 	max-width: initial;
@@ -186,32 +196,26 @@ body{
 	display: flex;
 	padding-block:12px ;	
 	animation: ticker 15s linear infinite;
-	width: max-content;
-}
-.ticker__item{
+	width: fit-content;
 	white-space: nowrap;
-	padding: 0;
+	
 	font-size: 22px;
 	color: white;
-	display: flex;
 	align-items: center;
 	text-transform: uppercase;
 }
-.ticker__item-circle{
-	height: 6px;
-	width: 6px;
-	border-radius: 50%;
-	background-color: white;
-	display: inline-block;
-	margin-inline: 15px;
+.ticker__wrapper:after {
+	content: '• Дело помощи утопающим — дело рук самих утопающих • Шахматы двигают вперед не только культуру, но и экономику • Лед тронулся, господа присяжные заседатели';
 }
+
 @keyframes ticker {
-	0%{
-		transform: translateX(100%);
-	}
-	100%{
-		transform: translateX(-100%);
-	}
+	0% {
+		transform: translate(0, 0);
+	  }
+	  100% {
+		transform: translate(-50%, 0);
+		/* changed from 100% */
+	  }
 }
 
 .lecture{
@@ -388,8 +392,12 @@ tr:last-child{
 	border-radius: 62px;
 	background: none;
 	border:1px solid #3057A2;
-	font-family: var(--golos);
 	color: #3057A2;
+	font-family: var(--golosmedium);
+}
+.participant__details-button:hover{
+	background-color: #3057A2;
+	color: white;
 }
 .participants__switcher{
 	display: flex;
@@ -398,6 +406,12 @@ tr:last-child{
 	font-family: var(--golos);
 	justify-content: center;
 	margin-top: 40px;
+}
+.participants__switcher-right:not(.disabled):hover{
+	fill: #FBCE51;
+}
+.participants__switcher-left:not(.disabled):hover{
+	fill: #FBCE51;
 }
 footer{
 	background-color: #E9DED4;
@@ -631,6 +645,7 @@ footer{
 	.banner__button-support, .banner__button-detail {
 		padding: 20px 60px;
 	}
+
 	.banner__button-detail{
 		background: none;
 		border: 2px solid black;
